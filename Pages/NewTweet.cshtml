@@ -1,0 +1,19 @@
+﻿@page
+@model Tweetcool.Pages.NewTweetModel
+@{
+    ViewData["Title"] = "NewTweet";
+}
+    <html>
+    <div class="text-left">
+        <h2>Your Tweet:</h2>
+        <br />
+    </div>
+    <body>
+        <div>
+            <p><img src="https://loeywerkingwells.files.wordpress.com/2018/02/no-twitter.jpg" width="62" height="50" alt="HTML Dog"><b>@NewTweetModel.Tweet.UserName</b>: @NewTweetModel.Tweet.Text (@NewTweetModel.Tweet.TweetingTime)</p>
+            <p><a href="/Index">OK</a></p>
+            <br />
+
+        </div>
+    </body>
+    </html>

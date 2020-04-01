@@ -1,0 +1,23 @@
+﻿@page
+@model Tweetcool.Pages.AllTweetsModel
+@{
+    ViewData["Title"] = "AllTweets";
+}
+<html>
+<head>
+    <title>Tweets</title>
+</head>
+<body>
+    <div>
+        @foreach (var username in AllTweetsModel.TweetDictionary.Keys)
+        {
+            <div>
+                @foreach (Tweet tweet in AllTweetsModel.TweetDictionary[username])
+                {
+                    <p id="tweet"><b>@username</b> : @tweet.Text (@tweet.TweetingTime)</p>
+                }
+            </div>
+        }
+    </div>
+</body>
+</html>
